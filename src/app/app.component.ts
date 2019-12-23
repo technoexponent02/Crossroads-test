@@ -16,7 +16,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     this.apiService.getCommits('/Crossroads-test/commits').subscribe((res:any) => {         //get commit data
-      res.forEach(async(ele:any) => {
+      res.forEach(async(ele:any) => {                                                       //set data according to the requirement
         console.log(ele);
         let dt = await this.convert(ele.commit.committer.date);                             //convert date
         this.commitData.push({

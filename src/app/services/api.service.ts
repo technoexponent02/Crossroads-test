@@ -11,7 +11,8 @@ export class ApiService {
   constructor(
     private http: HttpClient
   ) { }
-
+  
+  //get commits from gitHub api
   getCommits(params:any){
     return this.http.get('https://api.github.com/repos/technoexponent02' + params,{headers: this.headers});
   }
